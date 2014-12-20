@@ -1,4 +1,3 @@
-BEGIN;
 ALTER TABLE person ADD COlUMN dead INTEGER;
 ALTER TABLE person ADD COLUMN phone_number TEXT;
 ALTER TABLE person ADD COLUMN salary FLOAT;
@@ -7,7 +6,7 @@ ALTER TABLE person ADD COLUMN dob DATETIME;
 ALTER TABLE person_pet ADD COLUMN purchased_on DATETIME;
 
 ALTER TABLE pet ADD COLUMN parent INTEGER;
-ALTER TABLE pet ADD COLUMN dob DATETIME;
+ALTER pet ADD COLUMN dob DATETIME;
 
 UPDATE person SET
     dead = 1, 
@@ -75,4 +74,3 @@ SELECT name, parent FROM pet WHERE parent IN (
     WHERE
     pet.name = 'Gigantor'
 );
-ROLLBACK;
