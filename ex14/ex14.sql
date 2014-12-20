@@ -1,4 +1,3 @@
-BEGIN;
 ALTER TABLE person ADD COlUMN dead INTEGER;
 ALTER TABLE person ADD COLUMN phone_number TEXT;
 ALTER TABLE person ADD COLUMN salary FLOAT;
@@ -75,4 +74,3 @@ SELECT name, parent FROM pet WHERE parent IN (
     WHERE
     pet.name = 'Gigantor'
 );
-ROLLBACK;
